@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4731429c7f25ab92eaa813447a972209",
+    "content-hash": "af426e4d7b398485605e640b17a9ac33",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2580,6 +2580,46 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
+            "name": "uspdev/laravel-comet-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uspdev/laravel-comet-theme.git",
+                "reference": "504c9eb3b6c605502165996a17f6b1a4e95770de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uspdev/laravel-comet-theme/zipball/504c9eb3b6c605502165996a17f6b1a4e95770de",
+                "reference": "504c9eb3b6c605502165996a17f6b1a4e95770de",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Uspdev\\CometTheme\\CometThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Uspdev\\CometTheme\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Thiago Gomes Verissimo",
+                    "email": "thiago.verissimo@usp.br"
+                }
+            ],
+            "description": "comet theme for laravel",
+            "time": "2019-03-28T20:18:30+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v3.3.3",
             "source": {
@@ -4399,7 +4439,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "uspdev/laravel-comet-theme": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
