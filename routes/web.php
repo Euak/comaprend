@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('master');
 });
+
+Route::post('teste', function (){
+    return ['message' => 'Suffering from Success!'];
+});

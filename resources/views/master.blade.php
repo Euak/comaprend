@@ -1,4 +1,7 @@
 @extends('laravel-comet-theme::master')
+@section('meta')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
 
 @section('header')
     Corpus de Aprendizes
@@ -26,6 +29,6 @@
 @endsection
 
 @section('javascripts')
-  @parent
-  <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
+    @parent
+    <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
 @endsection
