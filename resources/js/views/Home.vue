@@ -17,6 +17,9 @@
                     </div>
                     <button type="submit" class="btn btn-success float-right">Entrar</button>
                 </form>
+                <router-link to="/nova-conta">
+                    <a class="btn btn-success">Crie uma conta</a>
+                </router-link>
             </div>
         </div>
 
