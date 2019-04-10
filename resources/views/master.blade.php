@@ -1,7 +1,24 @@
 @extends('laravel-comet-theme::master')
 
 @section('header')
-    Bem-vindo ao Corpus de Aprendizes
+    Corpus de Aprendizes
+@endsection
+
+@section('body_top')
+<div id="app">
+@endsection
+    @section('menu-itens')
+        <li class="nav-item active divider-vertical">
+            <router-link to="/">
+                <a class="nav-link" >Home</a>
+            </router-link>
+        </li>
+    @endsection
+    @section('content')
+        <router-view></router-view>
+    @endsection
+@section('body_bottom')
+</div>
 @endsection
 
 @section('footer')
