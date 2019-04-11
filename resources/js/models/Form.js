@@ -1,3 +1,6 @@
+// Import Errors
+import Errors from './Errors';
+
 class Form {
     /**
      * Create a new Form instance.
@@ -10,6 +13,8 @@ class Form {
         for (let field in data) {
             this[field] = data[field];
         }
+
+        this.errors = new Errors();
     }
 
 
@@ -24,6 +29,17 @@ class Form {
         }
 
         return data;
+    }
+
+    /**
+     * Reset the form fields.
+     */
+    reset() {
+        for (let field in this.originalData) {
+            this[field] = '';
+        }
+
+        this.errors.clear();
     }
 
     /**
@@ -81,7 +97,7 @@ class Form {
                     resolve(response.data);
                 })
                 .catch(error => {
-                    this.onFail(error.response);
+                    this.onFail(error.response.data.errors);
 
                     reject(error);
                 });
@@ -96,6 +112,8 @@ class Form {
      */
     onSuccess(data) {
         alert(data.message); // temporary
+
+        this.reset();
     }
 
 
@@ -105,7 +123,7 @@ class Form {
      * @param {object} errors
      */
     onFail(errors) {
-        console.log(errors);
+        this.errors.record(errors);
     }
 }
 
