@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::post('teste', function (){
     return ['message' => 'Suffering from Success!'];
 });
+
+Auth::routes();
+
+Route::get('/home', function() {
+        return ['user' => Auth::user() ? Auth::user() : null];
+    })->name('home');
