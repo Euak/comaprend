@@ -15,13 +15,21 @@
                         <label for="titulo">Senha</label>
                         <input type="password" class="form-control" name="senha" id="senha" autocomplete="current-password" v-model="form.senha" required>
                     </div>
-                    <button type="submit" class="btn btn-success float-right">Entrar</button>
+                    <div class="row">
+                        <div class="col text-center order-2 order-sm-1">
+                            <router-link to="/nova-conta">
+                                <a class="btn btn-success">Crie uma conta</a>
+                            </router-link>
+                        </div>
+                        <div class="col form-group text-center order-1 order-sm-2">
+                            <button type="submit" class="btn btn-success">Entrar</button>
+                        </div>
+                    </div>
                 </form>
-                <router-link to="/nova-conta">
-                    <a class="btn btn-success">Crie uma conta</a>
-                </router-link>
             </div>
         </div>
+
+
 
     </div>
 </template>
